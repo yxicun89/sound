@@ -1,0 +1,11 @@
+version: "2.3"
+
+services:
+  app:
+    build: app
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/shared
+    working_dir: /shared/app
+    command: python3.9 app.py
